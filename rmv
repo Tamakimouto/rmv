@@ -1,0 +1,11 @@
+#!/bin/bash
+# rmv
+# Just moves a file to my screenshot directory
+# -------------------------------------------------------
+# Author: Tama
+
+for args in "$@"
+do
+    M_FILE="/home/tama/images/Screenshots/ss-`date '+%d-%m-%y-%H%M%S'`.png"
+    mv $args $M_FILE
+done
