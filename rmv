@@ -4,8 +4,13 @@
 # -------------------------------------------------------
 # Author: Tama
 
+N=0
+DIR="/home/tama/images/Screenshots/"
+EXT=".png"
+
 for args in "$@"
 do
-    M_FILE="/home/tama/images/Screenshots/ss-`date '+%d-%m-%y-%H%M%S'`.png"
+    ((N++))
+    M_FILE=$DIR"ss-`date '+%d-%m-%y-%H%M%S'`"$N$EXT
     mv $args $M_FILE
 done
